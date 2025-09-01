@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    double sum = 0; 
+    double maxValue = 0; 
+
+    for (int i = 0; i < n; i++) {
+        double score;
+        cin >> score;
+
+        sum += score; 
+        if (score > maxValue) {
+            maxValue = score; 
+        }
+    }
+
+    double newAvg = (sum / maxValue * 100) / n;
+    cout << newAvg;
+}
